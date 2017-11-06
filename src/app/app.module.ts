@@ -12,10 +12,12 @@ import { AppService } from 'app/app.service';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { ProfileGuard } from 'app/profile.guard';
 import { RouterModule } from '@angular/router';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
