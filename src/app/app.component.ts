@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 import { IUser } from 'app/app.model';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'mt-root',
@@ -16,7 +17,7 @@ export class AppComponent implements OnInit {
   dataSource: ExampleDataSource;
   data: IUser[] = [];
 
-  constructor(private service: AppService) { }
+  constructor(private service: AppService, private router: Router) { }
   ngOnInit() {
     const exampleDatabase = new ExampleDatabase(this.service);
     this.dataSource = new ExampleDataSource(exampleDatabase);
